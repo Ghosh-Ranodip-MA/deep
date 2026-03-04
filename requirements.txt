@@ -17,3 +17,4 @@ pydantic-settings
 sqlalchemy
 aiosqlite
 numpy
+langchain-google-genai>=1.0.0langchain-google-genai>=1.0.0
