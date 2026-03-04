@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+.env
+*.db
+*.db-journal
+
+# Logs
+logs/
+*.log
+
+# Reports
+generated_reports/
+reports/
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+*.pid
+*.sock
+
+# Output
+pdfs/
+error.log
