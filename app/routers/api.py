@@ -8,11 +8,18 @@ from pydantic import BaseModel
 from app.graph.workflow import graph
 from app.config import settings
 from app.models import ResearchState
-from app.routers.research import router
+from app.routers import research  # Import the module, not the router
 
 logger = logging.getLogger(__name__)
+
+# Create main router
 router = APIRouter()
 
+# Include research routes with a prefix (optional)
+router.include_router(research.router, prefix="/research")
+
+# ... rest of your existing routes (keep everything below this line) ...
+# All your @router.post("/research"), @router.get("/pdf"), etc. stay exactly as they are
 HISTORY_FILE = os.path.join(settings.JSON_OUTPUT_DIR, "history.json")
 
 class ResearchRequest(BaseModel):
